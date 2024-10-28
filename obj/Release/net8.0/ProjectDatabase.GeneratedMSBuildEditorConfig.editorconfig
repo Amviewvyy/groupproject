@@ -1,0 +1,279 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ProjectDatabase
+build_property.RootNamespace = ProjectDatabase
+build_property.ProjectDir = F:\Database\ProjectData\ProjectData\ProjectDatabase\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = F:\Database\ProjectData\ProjectData\ProjectDatabase
+build_property._RazorSourceGeneratorDebug = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Areas/Identity/Pages/_AuthLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX0F1dGhMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2010/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxMFxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2010/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxMFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2010/GroupedResults.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxMFxHcm91cGVkUmVzdWx0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2010/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxMFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2011/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxMVxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2011/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxMVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2011/GroupedResults.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxMVxHcm91cGVkUmVzdWx0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2011/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxMVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2012/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxMlxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2012/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxMlxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2012/GroupedResults.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxMlxHcm91cGVkUmVzdWx0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2012/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxMlxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2013/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxM1xBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2013/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxM1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2013/GroupedResults.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxM1xHcm91cGVkUmVzdWx0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2013/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxM1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2014/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxNFxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2014/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxNFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2014/GroupedResults.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxNFxHcm91cGVkUmVzdWx0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2014/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxNFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2015/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxNVxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2015/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxNVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2015/GroupedResults.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxNVxHcm91cGVkUmVzdWx0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2015/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxNVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2016/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxNlxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2016/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxNlxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2016/GroupedResults.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxNlxHcm91cGVkUmVzdWx0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2016/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxNlxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2017/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxN1xBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2017/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxN1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2017/GroupedResults.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxN1xHcm91cGVkUmVzdWx0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2017/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxN1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2018/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxOFxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2018/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxOFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2018/GroupedResults.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxOFxHcm91cGVkUmVzdWx0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2018/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxOFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2019/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxOVxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2019/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxOVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2019/GroupedResults.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxOVxHcm91cGVkUmVzdWx0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2019/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAxOVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2020/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAyMFxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2020/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAyMFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2020/GroupedResults.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAyMFxHcm91cGVkUmVzdWx0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2020/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAyMFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2021/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAyMVxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2021/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAyMVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2021/GroupedResults.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAyMVxHcm91cGVkUmVzdWx0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Mlb2021/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWxiMjAyMVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Database/ProjectData/ProjectData/ProjectDatabase/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-eji3h8kiby

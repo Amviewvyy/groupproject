@@ -1,0 +1,540 @@
+﻿@{
+    ViewData["Title"] = "All Mlb2021";
+}
+
+<style>
+    .btn-green {
+        background-color: green;
+        color: white;
+    }
+
+
+    }
+
+</style>
+
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="p-4">All Mlb2021</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <form class="d-flex" asp-action="Index" asp-controller="Mlb2021">
+                <input name="searchString" class="form-control me-1" type="search" placeholder="Search" aria-label="Search" value="@ViewData["CurrentFilter"]">
+                <button class="btn btn-green" type="submit">Search</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <a asp-action="Index" class="text-dark">Back to Full List</a>
+        </div>
+    </div>
+
+    <form method="get">
+        <select name="selectedMonth">
+            <option value="">Select Month</option>
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+        </select>
+        <!--<input type="submit" class="btn btn-dark" value="Filter" btn btn-dark"" />-->
+        <button type="submit" class="btn btn-white">
+            <i class="bi bi-funnel-fill"></i> Filter
+        </button>
+    </form>
+    <form method="get" asp-action="GroupByColumn">
+        <div>
+            <label for="groupColumn">เลือกคอลัมน์ที่ต้องการ group:</label>
+            <select id="groupColumn" name="groupColumn">
+                <option value="">-</option>
+                <option value="Date">Date</option>
+                <option value="Rot">Rot</option>
+                <option value="VH">VH</option>
+                <option value="Team">Team</option>
+                <option value="Pitcher">Pitcher</option>
+                <option value="_1st">1</option>
+                <option value="_2nd">2</option>
+                <option value="_3rd">3</option>
+                <option value="_4th">4</option>
+                <option value="_5th">5</option>
+                <option value="_6th">6</option>
+                <option value="_7th">7</option>
+                <option value="_8th">8</option>
+                <option value="_9th">9</option>
+                <option value="Final">Final</option>
+                <option value="Open">Open</option>
+                <option value="Close">Close</option>
+                <option value="Run_line">Run_line1</option>
+                <option value="column20">Run_line2</option>
+                <option value="OpenOU">OpenOU1</option>
+                <option value="column22">OpenOU2</option>
+                <option value="CloseOU">CloseOU1</option>
+                <option value="column24">CloseOU2</option>
+            </select>
+            <button type="submit" class="btn btn-green">Submit</button>
+        </div>
+    </form>
+
+    <form method="get" asp-action="Index">
+        <div>
+            <label for="searchColumn">เลือกคอลัมน์ที่ต้องการค้นหา:</label>
+            <select id="searchColumn" name="searchColumn">
+                <option value="">-</option>
+                <option value="VH">VH</option>
+                <option value="Date">Date</option>
+                <option value="Rot">Rot</option>
+                <option value="Team">Team</option>
+                <option value="Pitcher">Pitcher</option>
+                <option value="_1st">1</option>
+                <option value="_2nd">2</option>
+                <option value="_3rd">3</option>
+                <option value="_4th">4</option>
+                <option value="_5th">5</option>
+                <option value="_6th">6</option>
+                <option value="_7th">7</option>
+                <option value="_8th">8</option>
+                <option value="_9th">9</option>
+                <option value="Final">Final</option>
+                <option value="Open">Open</option>
+                <option value="Close">Close</option>
+                <option value="Run_line">Run_line1</option>
+                <option value="column20">Run_line2</option>
+                <option value="OpenOU">OpenOU1</option>
+                <option value="column22">OpenOU2</option>
+                <option value="CloseOU">CloseOU1</option>
+                <option value="column24">CloseOU2</option>
+            </select>
+            <input type="text" name="searchValue" placeholder="Enter value" />
+            <button class="btn btn-green" type="submit">ค้นหา</button>
+        </div>
+    </form>
+    <form asp-action="Index" asp-controller="Mlb2021" method="get">
+        <div class="d-inline">
+            <label class="d-inline" style="margin-right: 14px;">
+                <input type="radio" name="pageSize" value="200" @(ViewData["PageSize"]?.ToString() == "1" ? "checked" : "")>
+                200
+            </label>
+            <label class="d-inline" style="margin-right: 14px;">
+                <input type="radio" name="pageSize" value="1000" @(ViewData["PageSize"]?.ToString() == "5" ? "checked" : "")>
+                1000
+            </label>
+            <label class="d-inline" style="margin-right: 14px;">
+                <input type="radio" name="pageSize" value="All" @(ViewData["PageSize"]?.ToString() == "10" ? "checked" : "")>
+                All
+            </label>
+        </div>
+        <button type="submit" class="btn btn-green d-inline" style="margin-left: 10px;">Apply</button>
+
+    </form>
+    <div>
+        <input type="radio" name="chartToggle" value="show" checked> แสดงกราฟทั้งหมด
+        <input type="radio" name="chartToggle" value="hide"> ปิดกราฟทั้งหมด
+    </div>
+    <div>
+        <canvas id="myChart1"></canvas>
+    </div>
+    <div>
+        <canvas id="myChart2"></canvas>
+    </div>
+    <div>
+        <canvas id="myChart3"></canvas>
+    </div>
+    <div>
+        <canvas id="myChart4"></canvas>
+    </div>
+    <div>
+        <canvas id="myChart5"></canvas>
+    </div>
+    <div>
+        <canvas id="myChart6"></canvas>
+    </div>
+    <div>
+        <canvas id="myChart7"></canvas>
+    </div>
+    <div>
+        <canvas id="myChart8"></canvas>
+    </div>
+    <div>
+        <canvas id="myChart9"></canvas>
+    </div>
+    <div>
+        <canvas id="myChartFinal"></canvas>
+    </div>
+    <div>
+        <canvas id="myChartOpen"></canvas>
+    </div>
+    <div>
+        <canvas id="myChartClose"></canvas>
+    </div>
+    <div>
+        <canvas id="myChartRun_line1"></canvas>
+    </div>
+    <div>
+        <canvas id="myChartRun_line2" "></canvas>
+    </div>
+    <div>
+        <canvas id="myChartOpenOU1"></canvas>
+    </div>
+    <div>
+        <canvas id="myChartOpenOU2"></canvas> <!-- แก้ไข id ที่พิมพ์ผิด -->
+    </div>
+    <div>
+        <canvas id="myChartCloseOU1"></canvas>
+    </div>
+    <div>
+        <canvas id="myChartCloseOU2"></canvas>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 p-4">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">
+                            <a class="text-dark" asp-controller="Mlb2021" asp-action="Index"
+                               asp-route-sortOrder="@ViewData["IdSortParam"]"
+                               asp-route-currentFilter="@ViewData["CurrentFilter"]">#</a>
+                        </th>
+                        <th scope="col">
+                            <a class="text-dark" asp-controller="Mlb2021" asp-action="Index"
+                               asp-route-sortOrder="@ViewData["DateSortParam"]"
+                               asp-route-currentFilter="@ViewData["CurrentFilter"]">Date</a>
+                        </th>
+                        <th scope="col">
+                            <a class="text-dark" asp-controller="Mlb2021" asp-action="Index"
+                               asp-route-sortOrder="@ViewData["RotSortParam"]"
+                               asp-route-currentFilter="@ViewData["CurrentFilter"]">Rot</a>
+                        </th>
+                        <th scope="col">
+                            <a class="text-dark" asp-controller="Mlb2021" asp-action="Index"
+                               asp-route-sortOrder="@ViewData["VHSortParam"]"
+                               asp-route-currentFilter="@ViewData["CurrentFilter"]">VH</a>
+                        </th>
+                        <th scope="col">
+                            <a class="text-dark" asp-controller="Mlb2021" asp-action="Index"
+                               asp-route-sortOrder="@ViewData["TeamSortParam"]"
+                               asp-route-currentFilter="@ViewData["CurrentFilter"]">TEAM</a>
+                        </th>
+                        <th scope="col">
+                            <a class="text-dark" asp-controller="Mlb2021" asp-action="Index"
+                               asp-route-sortOrder="@ViewData["PitcherSortParam"]"
+                               asp-route-currentFilter="@ViewData["CurrentFilter"]">Pitcher</a>
+                        </th>
+                        <th scope="col">
+                            <a class="text-dark" asp-controller="Mlb2021" asp-action="Index"
+                               asp-route-sortOrder="@ViewData["1stSortParam"]"
+                               asp-route-currentFilter="@ViewData["CurrentFilter"]">1</a>
+                        </th>
+                        <th scope="col">
+                            <a class="text-dark" asp-controller="Mlb2021" asp-action="Index"
+                               asp-route-sortOrder="@ViewData["2ndSortParam"]"
+                               asp-route-currentFilter="@ViewData["CurrentFilter"]">2</a>
+                        </th>
+                        <th scope="col">
+                            <a class="text-dark" asp-controller="Mlb2021" asp-action="Index"
+                               asp-route-sortOrder="@ViewData["3rtSortParam"]"
+                               asp-route-currentFilter="@ViewData["CurrentFilter"]">3</a>
+                        </th>
+                        <th scope="col">
+                            <a class="text-dark" asp-controller="Mlb2021" asp-action="Index"
+                               asp-route-sortOrder="@ViewData["4thSortParam"]"
+                               asp-route-currentFilter="@ViewData["CurrentFilter"]">4</a>
+                        </th>
+                        <th scope="col">
+                            <a class="text-dark" asp-controller="Mlb2021" asp-action="Index"
+                               asp-route-sortOrder="@ViewData["5thSortParam"]"
+                               asp-route-currentFilter="@ViewData["CurrentFilter"]">5</a>
+                        </th>
+                        <th scope="col">
+                            <a class="text-dark" asp-controller="Mlb2021" asp-action="Index"
+                               asp-route-sortOrder="@ViewData["6thSortParam"]"
+                               asp-route-currentFilter="@ViewData["CurrentFilter"]">6</a>
+                        </th>
+                        <th scope="col">
+                            <a class="text-dark" asp-controller="Mlb2021" asp-action="Index"
+                               asp-route-sortOrder="@ViewData["7thSortParam"]"
+                               asp-route-currentFilter="@ViewData["CurrentFilter"]">7</a>
+                        </th>
+                        <th scope="col">
+                            <a class="text-dark" asp-controller="Mlb2021" asp-action="Index"
+                               asp-route-sortOrder="@ViewData["8thSortParam"]"
+                               asp-route-currentFilter="@ViewData["CurrentFilter"]">8</a>
+                        </th>
+                        <th scope="col">
+                            <a class="text-dark" asp-controller="Mlb2021" asp-action="Index"
+                               asp-route-sortOrder="@ViewData["9thSortParam"]"
+                               asp-route-currentFilter="@ViewData["CurrentFilter"]">9</a>
+                        </th>
+                        <th scope="col">
+                            <a class="text-dark" asp-controller="Mlb2021" asp-action="Index"
+                               asp-route-sortOrder="@ViewData["FinalSortParam"]"
+                               asp-route-currentFilter="@ViewData["CurrentFilter"]">Final</a>
+                        </th>
+                        <th scope="col">
+                            <a class="text-dark" asp-controller="Mlb2021" asp-action="Index"
+                               asp-route-sortOrder="@ViewData["OpenSortParam"]"
+                               asp-route-currentFilter="@ViewData["CurrentFilter"]">Open</a>
+                        </th>
+                        <th scope="col">
+                            <a class="text-dark" asp-controller="Mlb2021" asp-action="Index"
+                               asp-route-sortOrder="@ViewData["CloseSortParam"]"
+                               asp-route-currentFilter="@ViewData["CurrentFilter"]">Close</a>
+                        </th>
+                        <th scope="col" colspan="2">
+                            <a class="text-dark" asp-controller="Mlb2021" asp-action="Index"
+                               asp-route-sortOrder="@ViewData["RunSortParam"]"
+                               asp-route-currentFilter="@ViewData["CurrentFilter"]">Run_line</a>
+                        </th>
+                        <th scope="col" colspan="2">
+                            <a class="text-dark" asp-controller="Mlb2021" asp-action="Index"
+                               asp-route-sortOrder="@ViewData["OpenOUSortParam"]"
+                               asp-route-currentFilter="@ViewData["CurrentFilter"]">OpenOU</a>
+                        </th>
+                        <th scope="col" colspan="2">
+                            <a class="text-dark" asp-controller="Mlb2021" asp-action="Index"
+                               asp-route-sortOrder="@ViewData["CloseOUSortParam"]"
+                               asp-route-currentFilter="@ViewData["CurrentFilter"]">CloseOU</a>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+        @foreach (var mlb2021 in Model.Items)
+        {
+                        <tr>
+                            <th scope="row">@mlb2021.Id</th>
+                            <td>@mlb2021.Date</td>
+                            <td>@mlb2021.Rot</td>
+                            <td>@mlb2021.VH</td>
+                            <td>@mlb2021.Team</td>
+                            <td>@mlb2021.Pitcher</td>
+                            <td>@mlb2021._1st</td>
+                            <td>@mlb2021._2nd</td>
+                            <td>@mlb2021._3rd</td>
+                            <td>@mlb2021._4th</td>
+                            <td>@mlb2021._5th</td>
+                            <td>@mlb2021._6th</td>
+                            <td>@mlb2021._7th</td>
+                            <td>@mlb2021._8th</td>
+                            <td>@mlb2021._9th</td>
+                            <td>@mlb2021.Final</td>
+                            <td>@mlb2021.Open</td>
+                            <td>@mlb2021.Close</td>
+                            <td>@mlb2021.Run_line</td>
+                            <td>@mlb2021.column20</td>
+                            <td>@mlb2021.OpenOU</td>
+                            <td>@mlb2021.column22</td>
+                            <td>@mlb2021.CloseOU</td>
+                            <td>@mlb2021.column24</td>
+                            <td><a class="btn btn-dark" asp-controller="Mlb2021" asp-action="Edit" asp-route-id="@mlb2021.Id">Edit</a></td>
+                            <td><a class="btn btn-danger" asp-action="Delete" asp-controller="Mlb2021" asp-route-id="@mlb2021.Id" onClick="return confirm('Are you sure you want to delete this data?')">Delete</a></td>
+                        </tr>
+        }
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+        @*Paging*@
+    <div class="row">
+        <div class="col-md-6">
+        </div>
+        <div class="col-md-6">
+            <nav>
+                <ul class="pagination justify-content-end">
+                    <li class="page-item @(Model.PageIndex == 1 ? "disabled" : "")">
+                        <a class="page-link text-black" asp-route-pageNumber="1"
+                           asp-route-sortOrder="@ViewData["CurrentSort"]"
+                           asp-route-currentFilter="@ViewData["CurrentFilter"]">
+                            <span>First</span>
+                        </a>
+                    </li>
+
+                    <li class="page-item @(Model.HasPreviousPage ? "" : "disabled")">
+                        <a class="page-link text-black" asp-route-pageNumber="@(Model.PageIndex - 1)"
+                           asp-route-sortOrder="@ViewData["CurrentSort"]"
+                           asp-route-currentFilter="@ViewData["CurrentFilter"]">
+                            <span>Previous</span>
+                        </a>
+                    </li>
+
+        @for (int i = 1; i <= Model.TotalPages; i++)
+        {
+                        <li class="page-item @(Model.PageIndex == i ? "active" : "")">
+                            <a class="page-link text-black" asp-route-pageNumber="@i"
+                               asp-route-sortOrder="@ViewData["CurrentSort"]"
+                               asp-route-currentFilter="@ViewData["CurrentFilter"]">@i</a>
+                        </li>
+        }
+
+                    <li class="page-item @(Model.HasNextPage ? "" : "disabled")">
+                        <a class="page-link text-black" asp-route-pageNumber="@(Model.PageIndex + 1)"
+                           asp-route-sortOrder="@ViewData["CurrentSort"]"
+                           asp-route-currentFilter="@ViewData["CurrentFilter"]">
+                            <span>Next</span>
+                        </a>
+                    </li>
+                    <li class="page-item @(Model.PageIndex == Model.TotalPages ? "disabled" : "")">
+                        <a class="page-link text-black" asp-route-pageNumber="@Model.TotalPages"
+                           asp-route-sortOrder="@ViewData["CurrentSort"]"
+                           asp-route-currentFilter="@ViewData["CurrentFilter"]">
+                            <span>Last</span>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    window.onload = function () {
+        const ctx1 = document.getElementById('myChart1').getContext('2d');
+        const ctx2 = document.getElementById('myChart2').getContext('2d');
+        const ctx3 = document.getElementById('myChart3').getContext('2d');
+        const ctx4 = document.getElementById('myChart4').getContext('2d');
+        const ctx5 = document.getElementById('myChart5').getContext('2d');
+        const ctx6 = document.getElementById('myChart6').getContext('2d');
+        const ctx7 = document.getElementById('myChart7').getContext('2d');
+        const ctx8 = document.getElementById('myChart8').getContext('2d');
+        const ctx9 = document.getElementById('myChart9').getContext('2d');
+        const ctxFinal = document.getElementById('myChartFinal').getContext('2d');
+        const ctxOpen = document.getElementById('myChartOpen').getContext('2d');
+        const ctxClose = document.getElementById('myChartClose').getContext('2d');
+        const ctxRun1 = document.getElementById('myChartRun_line1').getContext('2d');
+        const ctxRun2 = document.getElementById('myChartRun_line2').getContext('2d');
+        const ctxOpenOU1 = document.getElementById('myChartOpenOU1').getContext('2d');
+        const ctxOpenOU2 = document.getElementById('myChartOpenOU2').getContext('2d');
+        const ctxCloseOU1 = document.getElementById('myChartCloseOU1').getContext('2d');
+        const ctxCloseOU2 = document.getElementById('myChartCloseOU2').getContext('2d');
+
+        const labels = [];
+        const dataPoints1 = [];
+        const dataPoints2 = [];
+        const dataPoints3 = [];
+        const dataPoints4 = [];
+        const dataPoints5 = [];
+        const dataPoints6 = [];
+        const dataPoints7 = [];
+        const dataPoints8 = [];
+        const dataPoints9 = [];
+        const dataPointsFinal = [];
+        const dataPointsOpen = [];
+        const dataPointsClose = [];
+        const dataPointsRunOU1 = [];
+        const dataPointsRunOU2 = [];
+        const dataPointsOpenOU1 = [];
+        const dataPointsOpenOU2 = [];
+        const dataPointsCloseOU1 = [];
+        const dataPointsCloseOU2 = [];
+
+                @foreach (var mlb2021 in Model.Items)
+                {
+                    <text>
+                labels.push('@mlb2021.Pitcher'); // หรือเปลี่ยนเป็น '@mlb2021.Date' ตามที่ต้องการ
+            dataPoints1.push(@mlb2021._1st);
+            dataPoints2.push(@mlb2021._2nd);
+            dataPoints3.push(@mlb2021._3rd);
+            dataPoints4.push(@mlb2021._4th);
+            dataPoints5.push(@mlb2021._5th);
+            dataPoints6.push(@mlb2021._6th);
+            dataPoints7.push(@mlb2021._7th);
+            dataPoints8.push(@mlb2021._8th);
+            dataPoints9.push(@mlb2021._9th);
+            dataPointsFinal.push(@mlb2021.Final);
+            dataPointsOpen.push(@mlb2021.Open);
+            dataPointsClose.push(@mlb2021.Close);
+            dataPointsRunOU1.push(@mlb2021.Run_line);
+            dataPointsRunOU2.push(@mlb2021.column20);
+            dataPointsOpenOU1.push(@mlb2021.OpenOU);
+            dataPointsOpenOU2.push(@mlb2021.column22);
+            dataPointsCloseOU1.push(@mlb2021.CloseOU);
+            dataPointsCloseOU2.push(@mlb2021.column24);
+                    </text>
+                    ;
+                }
+
+                                                            // สร้างกราฟ
+                                                            const charts = [
+            { ctx: ctx1, label: '1st', data: dataPoints1 },
+            { ctx: ctx2, label: '2nd', data: dataPoints2 },
+            { ctx: ctx3, label: '3rd', data: dataPoints3 },
+            { ctx: ctx4, label: '4th', data: dataPoints4 },
+            { ctx: ctx5, label: '5th', data: dataPoints5 },
+            { ctx: ctx6, label: '6th', data: dataPoints6 },
+            { ctx: ctx7, label: '7th', data: dataPoints7 },
+            { ctx: ctx8, label: '8th', data: dataPoints8 },
+            { ctx: ctx9, label: '9th', data: dataPoints9 },
+            { ctx: ctxFinal, label: 'Final', data: dataPointsFinal },
+            { ctx: ctxOpen, label: 'Open', data: dataPointsOpen },
+            { ctx: ctxClose, label: 'Close', data: dataPointsClose },
+            { ctx: ctxRun1, label: 'Run_line1', data: dataPointsRunOU1 },
+            { ctx: ctxRun2, label: 'Run_line2', data: dataPointsRunOU2 },
+            { ctx: ctxOpenOU1, label: 'OpenOU1', data: dataPointsOpenOU1 },
+            { ctx: ctxOpenOU2, label: 'OpenOU2', data: dataPointsOpenOU2 },
+            { ctx: ctxCloseOU1, label: 'CloseOU1', data: dataPointsCloseOU1 },
+            { ctx: ctxCloseOU2, label: 'CloseOU2', data: dataPointsCloseOU2 }
+        ];
+
+        charts.forEach(chart => {
+            new Chart(chart.ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: chart.label,
+                        data: chart.data,
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            // ซ่อนกราฟทั้งหมดในตอนเริ่มต้น
+            chart.ctx.canvas.style.display = 'none';
+        });
+
+        // ฟังก์ชันจัดการ radio buttons
+        document.querySelectorAll('input[name="chartToggle"]').forEach((radio) => {
+            radio.addEventListener('change', function () {
+                const value = this.value;
+                charts.forEach(chart => {
+                    if (value === 'show') {
+                        chart.ctx.canvas.style.display = 'block'; // แสดงกราฟทั้งหมด
+                    } else {
+                        chart.ctx.canvas.style.display = 'none'; // ปิดกราฟทั้งหมด
+                    }
+                });
+            });
+        });
+
+        // แสดงกราฟตามค่าเริ่มต้น
+        charts.forEach(chart => {
+            chart.ctx.canvas.style.display = 'block'; // แสดงกราฟทั้งหมดตามค่าเริ่มต้น
+        });
+    };
+</script>

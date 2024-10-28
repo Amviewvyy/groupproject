@@ -1,0 +1,150 @@
+﻿@model Mlb2015ViewModel;
+
+@{
+    ViewData["Title"] = "Edit Mlb2015";
+}
+<div class="p-4 container">
+    <div class="row p-4">
+        <div class="col-md-12">
+            <h3>Edit data  mlb2015</h3>
+        </div>
+    </div>
+    <div class="row p-4">
+        <div class="col-md-6">
+            <form asp-controller="Mlb2015" asp-action="Edit" method="post">
+                <div class="mb-3">
+                    <label for="Date" class="form-label fw-bold">Date</label>
+                    <input asp-for="Date" type="number" class="form-control">
+                    <span asp-validation-for="Date" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="Rot" class="form-label fw-bold">Rot</label>
+                    <input asp-for="Rot" type="number" class="form-control">
+                    <span asp-validation-for="Rot" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="VH" class="form-label fw-bold">VH</label>
+                    <input asp-for="VH" type="text" class="form-control">
+                    <span asp-validation-for="VH" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="Team" class="form-label fw-bold">Team</label>
+                    <input asp-for="Team" type="text" class="form-control">
+                    <span asp-validation-for="Team" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="Pitcher" class="form-label fw-bold">Pitcher</label>
+                    <input asp-for="Pitcher" type="text" class="form-control">
+                    <span asp-validation-for="Pitcher" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="_1st" class="form-label fw-bold">1st</label>
+                    <input asp-for="_1st" type="number" class="form-control">
+                    <span asp-validation-for="_1st" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="_2nd" class="form-label fw-bold">2nd</label>
+                    <input asp-for="_2nd" type="number" class="form-control">
+                    <span asp-validation-for="_2nd" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="_3rd" class="form-label fw-bold">3rd</label>
+                    <input asp-for="_3rd" type="number" class="form-control">
+                    <span asp-validation-for="_3rd" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="_4th" class="form-label fw-bold">4th</label>
+                    <input asp-for="_4th" type="number" class="form-control">
+                    <span asp-validation-for="_4th" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="_5th" class="form-label fw-bold">5th</label>
+                    <input asp-for="_5th" type="number" class="form-control">
+                    <span asp-validation-for="_5th" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="_6th" class="form-label fw-bold">6th</label>
+                    <input asp-for="_6th" type="number" class="form-control">
+                    <span asp-validation-for="_6th" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="_7th" class="form-label fw-bold">7th</label>
+                    <input asp-for="_7th" type="number" class="form-control">
+                    <span asp-validation-for="_7th" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="_8th" class="form-label fw-bold">8th</label>
+                    <input asp-for="_8th" type="number" class="form-control">
+                    <span asp-validation-for="_8th" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="_9th" class="form-label fw-bold">9th</label>
+                    <input asp-for="_9th" type="number" class="form-control">
+                    <span asp-validation-for="_9th" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="Final" class="form-label fw-bold">Final</label>
+                    <input asp-for="Final" type="number" class="form-control">
+                    <span asp-validation-for="Final" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="Open" class="form-label fw-bold">Open</label>
+                    <input asp-for="Open" type="number" class="form-control">
+                    <span asp-validation-for="Open" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="Close" class="form-label fw-bold">Close</label>
+                    <input asp-for="Close" type="number" class="form-control">
+                    <span asp-validation-for="Close" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="Run_line" class="form-label fw-bold">Run_line</label>
+                    <input asp-for="Run_line" type="number" step="0.01" class="form-control">
+                    <span asp-validation-for="Run_line" class="text-danger"></span>
+                    <input asp-for="column20" type="number" class="form-control">
+                    <span asp-validation-for="column20" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="OpenOU" class="form-label fw-bold">OpenOU</label>
+                    <input asp-for="OpenOU" type="number" step="0.01" class="form-control">
+                    <span asp-validation-for="OpenOU" class="text-danger"></span>
+                    <input asp-for="column22" type="number" class="form-control">
+                    <span asp-validation-for="column22" class="text-danger"></span>
+                </div>
+
+
+
+                <div class="mb-3">
+                    <label for="CloseOU" class="form-label fw-bold">CloseOU</label>
+                    <input asp-for="CloseOU" type="number" step="0.01" class="form-control">
+                    <span asp-validation-for="CloseOU" class="text-danger"></span>
+                    <input asp-for="column24" type="number" class="form-control">
+                    <span asp-validation-for="column24" class="text-danger"></span>
+                </div>
+
+
+
+                <button type="submit" class="btn btn-dark">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
